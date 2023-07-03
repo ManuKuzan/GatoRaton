@@ -13,6 +13,8 @@ console.log(matriz[1][1]);
 console.log(matriz[0][2]);
 console.log(matriz[2][1]);
 
+console.log("mesaje")
+
 
 
 
