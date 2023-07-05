@@ -1,22 +1,47 @@
-body{
- background-image: url(https://cdna.artstation.com/p/assets/images/images/022/177/648/original/cara-kornhaus-fire-copy.gif?1607041513);
-     background-color: black;
+/* video {
+    position: fixed;
+    min-width: 100%;
+    min-height: 100%;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    z-index: -1;
+    } */
+    body{
+        background-image: url(https://wallpapercave.com/wp/wp2794505.jpg);
+        background-size: 100%;
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+@font-face {
+    font-family: "mifuente";
+    src: url(./img/SuperMario256.ttf);
+}
+
+.imgGif2{
+    
+    height: 100%;
+    width: 100%;
+}
+.imgGif{
+    height: 100%;
+    width: 100%;
 }
 .titulo{
-    color: violet;
+    font-family: "mifuente";
+    color: rgb(255, 1, 221);
+    
+    border-radius: 200px;
+
    display: flex;
    justify-content: center;
    
-   padding-top: 101px;
-   margin-right: 60px;
+   padding-top: 150px;
+   margin-right: 50px;
    
 }
 
-/* .contenedorGato{
-    padding-left: 5px;
-    
-    
-} */
+
 main{
     
     padding-left: 20%;
@@ -24,8 +49,10 @@ main{
 }
 
 #a1{
-
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
     color: violet;
+    background-color: rgba(0, 0, 0, 0.337);
    
     height: 60px;
     width: 60px;
@@ -36,12 +63,14 @@ main{
    
     height: 60px;
     width: 60px;
+    background-color: rgba(0, 0, 0, 0.337);
 }
 #a3{
 
     color: violet;
     height: 60px;
     width: 60px;
+    background-color: rgba(0, 0, 0, 0.337);
 }
 #a4{
 
@@ -49,6 +78,7 @@ main{
    
     height: 60px;
     width: 60px;
+    background-color: rgba(0, 0, 0, 0.337);
 }
 #a5{
 
@@ -56,6 +86,7 @@ main{
    
     height: 60px;
     width: 60px;
+    background-color: rgba(0, 0, 0, 0.337);
 }
 #a6{
 
@@ -63,6 +94,7 @@ main{
    
     height: 60px;
     width: 60px;
+    background-color: rgba(0, 0, 0, 0.337);
 }
 #a7{
 
@@ -70,6 +102,7 @@ main{
    
     height: 60px;
     width: 60px;
+    background-color: rgba(0, 0, 0, 0.337);
 }
 #a8{
 
@@ -77,6 +110,7 @@ main{
    
     height: 60px;
     width: 60px;
+    background-color: rgba(0, 0, 0, 0.337);
 }
 #a9{
 
@@ -84,9 +118,13 @@ main{
    
     height: 60px;
     width: 60px;
+    background-color: rgba(0, 0, 0, 0.337);
 }
 table{
-    color: violet;
+    font-family: "mifuente";
+    color: rgb(255, 0, 187);
+    background-color: rgba(0, 0, 0, 0.447);
+    border-radius: 2px;
 }
 
 
