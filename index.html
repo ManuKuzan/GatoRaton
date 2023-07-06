@@ -12,8 +12,12 @@
       integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM"
       crossorigin="anonymous"
     />
+
+
   </head>
+  
   <body class=" bg-black ">
+    <!-- <video src="../GatoRaton/img/Megaman_ Super V. 2.0 Gameplay (Mesen NES _HD_ Pack).mp4" autoplay loop muted></video> -->
    <main class=" row d-flex justify-content-center ">
     <div class="col-sm-4">
       <div class="row d-flex justify-content-center align-items-center">
@@ -23,21 +27,21 @@
         <br />
         <div class="contenedorGato row">
           <div class="col-4-sm">
-            <button id="a1">a1</button>
-            <button id="a2">a2</button>
-            <button id="a3">a3</button>
+            <button class="celda" id="a1">-</button>
+            <button class="celda" id="a2">-</button>
+            <button class="celda" id="a3">-</button>
           </div>
           <br />
           <div class="col-4-sm">
-            <button id="a4">a4</button>
-            <button id="a5">a5</button>
-            <button id="a6">a6</button>
+            <button class="celda" id="a4">-</button>
+            <button class="celda" id="a5">-</button>
+            <button class="celda" id="a6">-</button>
           </div>
           <br />
           <div class="col-4-sm">
-            <button id="a7">a7</button>
-            <button id="a8">a8</button>
-            <button id="a9">a9</button>
+            <button class="celda" id="a7">-</button>
+            <button class="celda" id="a8">-</button>
+            <button class="celda" id="a9">-</button>
           </div>
         </div>
       </div>
@@ -45,22 +49,28 @@
 
       <br />
 
-      <table class="separado" border="1">
+      <table class="separado">
         <tr>
           <td>Turno</td>
-          <td>Jugador X</td>
-          <td>Jugador O</td>
+          <td>Player1</td>
+          <td>Player2</td>
         </tr>
 
         <tr>
-          <td>posición</td>
-          <td></td>
-          <td></td>
+          <td>posicion</td>
+          <td id="contaJ1">0</td>
+          <td id="contaJ2">0</td>
         </tr>
       </table>
+      <section>
+        <button id="BotonRest">Jugar Otra vez!</button>
+      </section>
       <br /><br />
     </div>
+    <h5 id="colorH5">¡Comienza de nuevo!</h5>
+    <a href="index.html" ><img id="tamanio" src="https://studio.code.org/v3/assets/mgpFnkkrqwhxNwH0j6wQDqU0RjK7m3Mb2iMuN0jbaSI/12438.gif" width="200px" alt="" ></a>
 </main>
   </body>
+  
   <script src="./logica.js"></script>
 </html>
