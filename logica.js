@@ -1,18 +1,27 @@
 let celdas = document.getElementsByClassName("celda");
 let listaJ1=document.getElementById("contaJ1")
 let listaJ2=document.getElementById("contaJ2")
-var juego = "single";
+let EtiquetaMulti=document.getElementById("Multijugador")
+var juego = "Solo";
 var player1 = "Player1";
 var player2 = "Player2";
 var turnoJugador = player1;
-
 var ganador = "";
 var win=0;
 var lose=0;
 
 
+EtiquetaMulti.addEventListener("click",cambiaMulti);
+function cambiaMulti(){
+if(juego=="Multijugador"){
+  juego="Solo";
+EtiquetaMulti.textContent=juego;
+}else{
+  juego="Multijugador";
+  EtiquetaMulti.textContent=juego;
+}
 
-
+}
 
 for (let i = 0; i < celdas.length; i++) {
   var saveButton = celdas[i];
@@ -20,13 +29,13 @@ for (let i = 0; i < celdas.length; i++) {
 }
 
 function marcaCelda(evento) {
-  if (juego == "single") {
+  if (juego == "Solo") {
+    if(ganador==""&& evento.target.textContent.startsWith("-")){
+
+    
     var etiquetaImg = document.createElement("img");
     etiquetaImg.classList.add("imgGif");
-    // etiquetaImg.id="imagenX"
-    // if(celdas[i].textContent=="" && gane=="jugador1Css"){
-      
-    // }
+   
     turnoJugador = player2;
     evento.target.classList.add("jugador1Css");
     evento.target.textContent = "";
@@ -43,9 +52,12 @@ if(ganador==""){
 }
     gane("jugador2Css");
     verificarEmpate();
+  }
+    //  comienza multijugador
+  } else if (juego == "Multijugador") 
+    if(ganador==""&& evento.target.textContent.startsWith("-")){
+{
     
-    //  vericadorGanador();
-  } else {
     var etiquetaImg = document.createElement("img");
     etiquetaImg.classList.add("imgGif");
 
@@ -53,17 +65,20 @@ if(ganador==""){
 
     if (turnoJugador == player1) {
       evento.target.classList.add("jugador1Css");
+      gane("jugador1Css");
       turnoJugador = player2;
       etiquetaImg.setAttribute("src", "img/soldado.gif");
     } else {
       evento.target.classList.add("jugador2Css");
+      gane("jugador2Css");
       turnoJugador = player1;
       etiquetaImg.setAttribute("src", "img/megaman1.gif");
     }
-
-    // vericadorGanador();
+    verificarEmpate();
+evento.target.appendChild(etiquetaImg);
+   
   }
-}
+}}
 function TurnoComputadora() {
   var listaDisponibe = [];
   for (let index = 0; index < celdas.length; index++) {
@@ -90,8 +105,6 @@ return;
   puesto1.style.pointerEvents="none"
 }
 
-console.log(celdas[1].textContent);
-
 
 function verificarEmpate() {
   // Comprueba si todas las celdas están ocupadas
@@ -99,15 +112,19 @@ function verificarEmpate() {
     return celda.classList.contains("jugador1Css") || celda.classList.contains("jugador2Css");
   });
 
-  console.log(todasOcupadas)
-  // Si todas las celdas están ocupadas y no hay un ganador, es un empate
+
   if (todasOcupadas && ganador === "") {
-    alert("¡Es un empate!");
-    location.reload();
+    Swal.fire({
+      title: '¡Empate!',
+      text: 'Intenta jugar otra vez',
+      imageUrl: 'https://pa1.aminoapps.com/6281/25e6bb72a1302bfe02f162b0528322acc7e0d078_hq.gif',
+      imageWidth: 400,
+      imageHeight: 200,
+      imageAlt: 'Custom image',
+    })
+    
   }
 }
-
-
 function gane(playerOne) {
 
    var combinacion1=
@@ -165,7 +182,14 @@ function gane(playerOne) {
       listaJ2.textContent=lose;
     }
     
-    alert("Ganó: "+jugadorQueGano);
+    Swal.fire({
+      title: 'Felicidades '+ jugadorQueGano,
+      text: '¡Ganaste!',
+      imageUrl: 'https://www.icegif.com/wp-content/uploads/2022/04/icegif-1377.gif',
+      imageWidth: 400,
+      imageHeight: 200,
+      imageAlt: 'Custom image',
+    }) 
       ganador=jugadorQueGano;
       }
      

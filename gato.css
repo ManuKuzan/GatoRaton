@@ -1,6 +1,6 @@
 
     body{
-        background-image: url(https://static.wixstatic.com/media/801e35_90d71f90fec84abb8b0d07ba0699ecfc~mv2_d_5400_3600_s_4_2.png/v1/fill/w_2500,h_1666,al_c/801e35_90d71f90fec84abb8b0d07ba0699ecfc~mv2_d_5400_3600_s_4_2.png);
+        background-image: url(https://wallpapers.com/images/hd/mega-man-different-art-styles-ji5dst23s7jndj8t.jpg);
         background-attachment: fixed;
         background-size: 100%;
         background-size: cover;
@@ -10,7 +10,15 @@
     font-family: "mifuente";
     src: url(./img/SuperMario256.ttf);
 }
-
+/* video {
+    position: fixed;
+    min-width: 100%;
+    min-height: 100%;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    z-index: -1;
+    } */
 .imgGif2{
     
     height: 100%;
@@ -21,27 +29,35 @@
     width: 100%;
 }
 .titulo{
-    font-family: "mifuente";
-    color: rgb(255, 1, 221);
     
-    border-radius: 200px;
-
-   display: flex;
-   justify-content: center;
-   
-   padding-top: 150px;
-   margin-right: 50px;
-   
+    font-family: "mifuente";
+    color: rgb(255, 1, 221);  
+    background-color: transparent; 
 }
-#BotonRest{
-    background-image: url('./img/button1.png');
+#Multijugador{
+    background-image: url('./img/zero.jpg');
     background-size: cover;
     background-position: center;
     width: 200px;
     height: 50px;
     border: none;
-    color: #fff;
-    font-size: 18px;
+    color: #0bfbff;
+    font-size: 20px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+  }
+  #Multijugador:hover{
+    transform: scale(1.1);
+  }
+#BotonRest{
+    background-image: url('./img/pbutton.jpg');
+    background-size: cover;
+    background-position: center;
+    width: 200px;
+    height: 50px;
+    border: none;
+    color: #00d9ff;
+    font-size: 20px;
     cursor: pointer;
     transition: transform 0.3s ease;
   }
@@ -49,18 +65,22 @@
   #BotonRest:hover {
     transform: scale(1.1);
   }
+  #audio{
+    padding-right: 95px;
+color:transparent;
+  }
 
 main{
     
     padding-left: 20%;
-    padding-right: 15%;
+   
 }
 
 #a1{
     -webkit-transition-duration: 0.4s; /* Safari */
     transition-duration: 0.4s;
     color: violet;
-    background-color: rgba(0, 0, 0, 0.337);
+    background-color: rgba(0, 0, 0, 0.708);
    
     height: 60px;
     width: 60px;
@@ -71,14 +91,14 @@ main{
    
     height: 60px;
     width: 60px;
-    background-color: rgba(0, 0, 0, 0.337);
+    background-color: rgba(0, 0, 0, 0.708);
 }
 #a3{
 
     color: violet;
     height: 60px;
     width: 60px;
-    background-color: rgba(0, 0, 0, 0.337);
+    background-color: rgba(0, 0, 0, 0.708);
 }
 #a4{
 
@@ -86,7 +106,7 @@ main{
    
     height: 60px;
     width: 60px;
-    background-color: rgba(0, 0, 0, 0.337);
+    background-color: rgba(0, 0, 0, 0.708);
 }
 #a5{
 
@@ -94,7 +114,7 @@ main{
    
     height: 60px;
     width: 60px;
-    background-color: rgba(0, 0, 0, 0.337);
+    background-color: rgba(0, 0, 0, 0.708);
 }
 #a6{
 
@@ -102,7 +122,7 @@ main{
    
     height: 60px;
     width: 60px;
-    background-color: rgba(0, 0, 0, 0.337);
+    background-color: rgba(0, 0, 0, 0.708);
 }
 #a7{
 
@@ -110,7 +130,7 @@ main{
    
     height: 60px;
     width: 60px;
-    background-color: rgba(0, 0, 0, 0.337);
+    background-color: rgba(0, 0, 0, 0.708);
 }
 #a8{
 
@@ -118,7 +138,7 @@ main{
    
     height: 60px;
     width: 60px;
-    background-color: rgba(0, 0, 0, 0.337);
+    background-color: rgba(0, 0, 0, 0.708);
 }
 #a9{
 
@@ -126,16 +146,16 @@ main{
    
     height: 60px;
     width: 60px;
-    background-color: rgba(0, 0, 0, 0.337);
+    background-color: rgba(0, 0, 0, 0.708);
 }
 table{
     font-family: "mifuente";
+    font-size: 20px;
     color: rgb(255, 0, 187);
-    background-color: rgba(0, 0, 0, 0.447);
+    background-color: rgba(0, 0, 0, 0.708);
     border-radius: 2px;
 }
 #colorH5{
     font-family: "mifuente";
     color: rgb(255, 1, 221);
 }
-

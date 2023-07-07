@@ -16,11 +16,13 @@
 
   </head>
   
-  <body class=" bg-black ">
-    <!-- <video src="../GatoRaton/img/Megaman_ Super V. 2.0 Gameplay (Mesen NES _HD_ Pack).mp4" autoplay loop muted></video> -->
-   <main class=" row d-flex justify-content-center ">
+  <body class=" bg-black d-flex justify-content-center ">
+    
+    <!-- <video src="../GatoRaton/img/Megaman_ Super V. 2.0 Gameplay (Mesen NES _HD_ Pack).mp4" autoplay loop></video> -->
+   <main class="acomodo">
+    <!-- <audio id="audio" src="../GatoRaton/img/audioM.mp3"controls autoplay></audio> -->
     <div class="col-sm-4">
-      <div class="row d-flex justify-content-center align-items-center">
+      <div class="">
         <div class="titulo">
         <h1>TicTacToe</h1>
     </div>
@@ -51,18 +53,20 @@
 
       <table class="separado">
         <tr>
-          <td>Turno</td>
+          <td> 🎮</td>
           <td>Player1</td>
           <td>Player2</td>
         </tr>
 
         <tr>
-          <td>posicion</td>
+          <td>wins</td>
           <td id="contaJ1">0</td>
           <td id="contaJ2">0</td>
         </tr>
       </table>
       <section>
+        <button id="Multijugador">Multijugador</button>
+        <br>
         <button id="BotonRest">Jugar Otra vez!</button>
       </section>
       <br /><br />
@@ -73,4 +77,5 @@
   </body>
   
   <script src="./logica.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </html>
